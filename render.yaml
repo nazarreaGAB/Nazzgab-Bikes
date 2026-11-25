@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: nazzgab-bikes
+    runtime: docker
+    plan: free
+    healthCheckPath: /api/status

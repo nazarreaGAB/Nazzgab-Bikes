@@ -1,0 +1,10 @@
+{
+  "name": "NazzGab Bikes (Node + GnuCOBOL)",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:22",
+  "postCreateCommand": "sudo apt-get update && sudo apt-get install -y gnucobol && npm run build:cobol",
+  "postStartCommand": "nohup npm start > /tmp/shop.log 2>&1 &",
+  "forwardPorts": [4173],
+  "portsAttributes": {
+    "4173": { "label": "NazzGab Bikes", "onAutoForward": "openBrowser" }
+  }
+}
