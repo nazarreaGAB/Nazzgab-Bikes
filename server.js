@@ -229,7 +229,7 @@ const STATIC = {
   '/app.js': ['app.js', 'text/javascript'],
 };
 
-http.createServer((req, res) => {
+const server = http.createServer((req, res) => {
   if (req.url.startsWith('/api/')) return handleApi(req, res);
   const hit = STATIC[req.url.split('?')[0]];
   if (!hit) { res.writeHead(404); return res.end('Not found'); }
@@ -238,4 +238,12 @@ http.createServer((req, res) => {
     res.writeHead(200, { 'Content-Type': hit[1] + '; charset=utf-8', 'X-Content-Type-Options': 'nosniff' });
     res.end(data);
   });
-}).listen(PORT, HOST, () => console.log(`NazzGab Bikes running on http://localhost:${PORT}`));
+});
+
+server.on('error', error => {
+  if (error.code !== 'EADDRINUSE') throw error;
+  console.error(`Port ${PORT} is already in use; NazzGab Bikes is already running.`);
+  process.exitCode = 1;
+});
+
+server.listen(PORT, HOST, () => console.log(`NazzGab Bikes running on http://localhost:${PORT}`));

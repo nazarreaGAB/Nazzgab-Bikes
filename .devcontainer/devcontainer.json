@@ -3,6 +3,7 @@
   "image": "mcr.microsoft.com/devcontainers/javascript-node:22",
   "postCreateCommand": "sudo apt-get update && sudo apt-get install -y gnucobol && npm run build:cobol",
   "postStartCommand": "nohup npm start > /tmp/shop.log 2>&1 &",
+  "postAttachCommand": "gh codespace ports visibility 4173:public -c \"$CODESPACE_NAME\" || true",
   "forwardPorts": [4173],
   "portsAttributes": {
     "4173": { "label": "NazzGab Bikes", "onAutoForward": "openBrowser" }

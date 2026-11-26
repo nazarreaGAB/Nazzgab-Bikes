@@ -4,7 +4,7 @@
 
 ### Open the shop
 
-- **[Browser shop preview](https://obscure-capybara-jjjr659jvj4qhwvq-4173.app.github.dev/)** opens the bike shop directly in your browser (GitHub Pages). It is a labeled preview with checkout disabled, because GitHub Pages cannot run Node or COBOL.
+- **[Browser shop preview](https://nazarreagab.github.io/spokes-and-co/)** opens the bike shop directly in your browser (GitHub Pages). It is a labeled preview with checkout disabled, because GitHub Pages cannot run Node or COBOL.
 - **Full shop with the real COBOL checkout:** use the Codespace steps below. The server now starts by itself whenever the Codespace starts, so port 4173 is ready when you reopen it.
 
 The working shop project follows this path:
@@ -29,10 +29,10 @@ Do these steps in order:
 2. Click **Fork** near the top-right, then click **Create fork**. You now have your own copy.
 3. Open your new fork. Click **Code → Codespaces → Create codespace on main**. Make sure you are on your fork, not the original repository.
 4. Wait for setup to finish. It installs Node.js and GnuCOBOL and compiles the COBOL program automatically.
-5. In the Codespaces terminal, type `npm start` and press Enter.
+5. The shop starts automatically when the Codespace starts or reconnects.
 6. Open port **4173** when Codespaces offers it, or select port 4173 in the **Ports** tab.
 
-If the site stops loading after you close and reopen the Codespace, wait a few seconds (the server restarts automatically), or type `npm start` again. To let other people open port 4173, right-click it in the **Ports** tab and choose **Port Visibility → Public**.
+If the site stops loading after you close and reopen the Codespace, select port 4173 in the **Ports** tab to open its current URL. Codespaces URLs can change; use the live port URL rather than a previously bookmarked `app.github.dev` address. The server starts automatically when the Codespace starts or resumes, and the port is made public when you attach. You can also run `npm start` in the terminal.
 
 Shortcut: the **Open in GitHub Codespaces** badge at the top of this page opens a Codespace straight from this repository.
 
