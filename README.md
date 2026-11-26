@@ -32,8 +32,6 @@ Do these steps in order:
 5. In the Codespaces terminal, type `npm start` and press Enter.
 6. Open port **4173** when Codespaces offers it, or select port 4173 in the **Ports** tab.
 
-The [browser shop preview](https://nazarreagab.github.io/spokes-and-co/) is optional. GitHub Pages cannot run the Node API or COBOL, so use your Codespace for the real checkout.
-
 If the site stops loading after you close and reopen the Codespace, wait a few seconds (the server restarts automatically), or type `npm start` again. To let other people open port 4173, right-click it in the **Ports** tab and choose **Port Visibility → Public**.
 
 Shortcut: the **Open in GitHub Codespaces** badge at the top of this page opens a Codespace straight from this repository.
@@ -105,14 +103,6 @@ A successful order returns receipt items with quantities and line totals, a pric
 Invalid requests return 400; stock conflicts return 409; an unavailable COBOL executable returns 503. Failed orders do not update stock.
 
 The API and COBOL program exchange one fixed-width input record per catalog product. Each record contains a signed six-digit quantity, eight-digit unit price in cents, and six-digit stock. COBOL returns either an error or the remaining-stock values, line totals, and the money summary in cents.
-
-## Optional: Always-On Hosting
-
-The repository includes a `Dockerfile` and `render.yaml` so a free host can run the real shop (Node API plus compiled GnuCOBOL) at a permanent web address:
-
-[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/nazarreaGAB/spokes-and-co)
-
-A free instance sleeps after about 15 minutes without visitors and takes about a minute to wake up, and the in-memory stock resets when it sleeps.
 
 ## Project Map
 
