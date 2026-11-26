@@ -4,7 +4,7 @@
 
 ### Open the shop
 
-- **[Browser shop preview](https://nazarreagab.github.io/spokes-and-co/)** opens the bike shop directly in your browser (GitHub Pages). It is a labeled preview with checkout disabled, because GitHub Pages cannot run Node or COBOL.
+- **[Browser shop preview](https://obscure-capybara-jjjr659jvj4qhwvq-4173.app.github.dev/)** opens the bike shop directly in your browser (GitHub Pages). It is a labeled preview with checkout disabled, because GitHub Pages cannot run Node or COBOL.
 - **Full shop with the real COBOL checkout:** use the Codespace steps below. The server now starts by itself whenever the Codespace starts, so port 4173 is ready when you reopen it.
 
 The working shop project follows this path:
