@@ -1,6 +1,6 @@
 # NazzGab Bikes Project
 
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/nazarreaGAB/spokes-and-co?quickstart=1)
+[![Open in GitHub Codespaces](https://github.com/codespaces/obscure-capybara-jjjr659jvj4qhwvq?editor=web)
 
 ### Open the shop
 
